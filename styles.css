@@ -32,12 +32,13 @@ body:before {
     z-index: -1;
 }
 
-section{
-    max-width: 1200px;
-    margin: auto;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+section {
+ margin:  auto;
+ padding: 0;
+ 
+ 
+    
+    
 }
 
 
@@ -78,6 +79,8 @@ nav ul li a:hover {
 
 main {
     margin: 15px 0;
+    justify-self: center;
+    right: 40px;
 }
 
 h2, h3 {
@@ -93,6 +96,7 @@ p {
     margin-bottom: 15px;
     line-height: 1.7;
     text-align: center;
+    
 }
 
 ul {
@@ -135,14 +139,11 @@ input[type="text"], input[type="email"], input[type="numer"] select {
 }
 
 input[type="submit"] {
-    margin: auto;
-    width: 100%;
-    background-color: #2c2c2c;
-    color: rgb(255, 255, 255);
-    border: none;
-    padding: 15px;
-    font-size: 
-    
+    padding: 20px 100px;
+    color: #000000;
+    background-color:#ffffff;
+    border-radius: 10px;
+    font-size: large;
 }
 
 input[type="submit"]:hover {
