@@ -21,6 +21,7 @@ body {
 
 
 body:before {
+    background-color: #00000079;
     text-align: center;
     content: "";
     position: absolute;
