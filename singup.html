@@ -4,52 +4,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anmäl dig</title>
+    <title>Anmälan till kurser - WebbExperts</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-   
     <header>
-        
-        <h2>Anmäl dig till en kurs</h2>
+        <h1>Anmäl dig till en kurs</h1>
         <nav>
             <ul>
-            <li><a href="index.html">Hem</a></li>
-            <li><a href="courses.html">Kursöversikt</a></li>
-            <li><a href="singup.html">Anmälan</a></li>
-           
+                <li><a href="index.html">Hem</a></li>
+                <li><a href="courses.html">Kursöversikt</a></li>
+                <li><a href="signup.html">Anmälan till kurser</a></li>
+            </ul>
         </nav>
     </header>
 
     <main>
         <section>
-            
-            <H2>Anmälningsformulär</H2>
-                <form action="submit_form.php" method="post">
+            <h2>Anmälningsformulär</h2>
+            <form action="submit_form.php" method="POST">
                 <label for="name">Namn:</label>
                 <input type="text" id="name" name="name" required>
 
                 <label for="email">E-post:</label>
                 <input type="email" id="email" name="email" required>
 
-                <label for="numer"> Nummer</label>
+                <label for="numer">Mobil nummer:</label>
                 <input type="text" id="numer" name="numer" required>
 
-                <label for="courser">Välj kurs</label>
-                <select id="courser" name="courser" required>
-                     <option value="html_css">HTML & CSS Grunder</option>
+                <label for="course">Välj kurs:</label>
+                <select type="course" name="course" required>
+                    <option value="html_css">HTML & CSS Grunder</option>
                     <option value="javascript">JavaScript fördjupning</option>
                     <option value="node_express">Node.js och Express</option>
                     <option value="react">React.js Utveckling</option>
-                
+                    
+
                 </select>
+                <input type="submit" value="Anmäl dig">
+            </form>
         </section>
-
-
-        <input type="submit" value="Anmäl dig">
-        
     </main>
+
     <footer>
         <p>&copy; 2024 WebbExperts</p>
     </footer>
