@@ -1,127 +1,96 @@
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-
 }
 
 body {
-    text-align: center;
     font-family: 'Helvetica Neue', Arial, sans-serif;
     color: #ffffff;
-    line-height: 0;
     background-image: url('img/2400-ai-generated-black-marble-background-with-golden-flecks-on-it.jpeg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    background-repeat: no-repeat;
     padding: 0;
-
+    position: relative;
+    min-height: 100vh;
 }
 
-
-body:before {
-    background-color: #00000079;
-    text-align: center;
+body::before {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
     z-index: -1;
 }
 
-section {
-
-    margin-right: auto;
-    padding: 0;
-    justify-content: center;
-
-
-
-}
-
-.content {
-    display: flex;
-    flex-direction: column;
-}
-
-
 
 header {
-    background-color: #0000005e;
+    background-color: rgba(0, 0, 0, 0.8);
     color: #ffffff;
-    padding-top: 20px;
-
-
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 2px -2px #000;
 }
 
 header h1 {
-    font-size: 2.5em;
-    margin-bottom: 10px;
+    font-size: 2.2em;
+    margin-bottom: 5px;
 }
 
-ul {
-    list-style-type: none;
+nav ul {
+    list-style: none;
     padding: 0;
+    display: flex;
+    justify-content: center;
 }
 
 nav ul li {
-    display: inline-block;
-    margin-right: 20px;
+    margin: 0 15px;
 }
 
 nav ul li a {
     color: #ffffff;
     text-decoration: none;
-    font-size: 1.2em;
+    font-size: 1em;
+    padding: 5px 10px;
+    transition: background-color 0.3s;
 }
 
 nav ul li a:hover {
     background-color: #d67c14;
-    transition: color
+    border-radius: 5px;
 }
-
 
 
 main {
-    margin: 15px 0;
-    justify-self: center;
-    right: 40px;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 1200px;
 }
 
-h2,
-h3 {
-    margin-bottom: 70PX;
+section {
+    margin: 40px 0;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+h2, h3 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
     color: #ffffff;
     text-align: center;
-    padding: 30PX;
-
 }
 
-
-
-p {
-    justify-self: 65PX;
+p, ul li {
     font-size: 1.1em;
-    margin-bottom: 15px;
-    line-height: 1.7;
-
-
-}
-
-ul {
-    list-style-type: none;
-    margin: 10px;
-    padding: 0;
-    text-align: center;
-}
-
-ul li {
-
-    font-size: 1.1em;
-    margin: 55px;
+    line-height: 1.6;
+    margin: 10px 0;
 }
 
 
@@ -131,46 +100,42 @@ form {
     margin: auto;
     background-color: rgba(255, 255, 255, 0.9);
     padding: 20px;
-    border-radius: 50px;
-
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 label {
     display: block;
-    margin-bottom: 10px;
-    font-size: 20px;
-    color: #000000;
+    margin-bottom: 8px;
+    font-size: 1em;
+    color: #333;
 }
 
-input[type="text"],
-input[type="email"],
-input[type="numer"] select {
+input[type="text"], input[type="email"], select {
     width: 100%;
     padding: 10px;
-    margin-bottom: 20px;
-    border-radius: 4px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
     font-size: 1em;
 }
 
-
 input[type="submit"] {
-    display: flex;
+    display: block;
     margin: auto;
-    padding: 20px 100px;
-    color: #000000;
-    background-color: #ffffff;
-    border-radius: 10px;
-    font-size: large;
+    padding: 10px 30px;
+    background-color: #d67c14;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
     cursor: pointer;
+    transition: background-color 0.3s;
 }
-
 
 input[type="submit"]:hover {
-    background-color: #020202;
-    color: white;
-
+    background-color: #ff9d3f;
 }
-
 
 
 table {
@@ -178,62 +143,74 @@ table {
     border-collapse: collapse;
     margin: 20px 0;
     text-align: left;
-    background-color: rgba(77, 74, 74, 0.9);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
-table th,
-table td {
+table th, table td {
     padding: 12px 15px;
     border: 1px solid #d4cece;
 }
 
 table th {
-    background-color: #030303;
-    color: #030303;
-    font-size: 1.2em;
+    background-color: #333;
+    color: #fff;
+    font-size: 1.1em;
 }
 
 table tr:nth-child(even) {
-    background-color: rgba(6, 6, 10, 0.9);
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 table tr:hover {
-    background-color: #000000;
-    color: #dad0d0;
-
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #ff9d3f;
+    transition: background-color 0.3s;
 }
 
 
 footer {
     background-color: rgba(39, 39, 39, 0.9);
-    color: white;
-    padding: 10px;
-    margin: 100;
-    margin: auto;
-    width: 300px;
-    border: 1PX solid rgb(230, 230, 230);
-
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+    font-size: 0.9em;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
 
 
 @media (max-width: 768px) {
     header h1 {
-        background-color: rgba(10, 10, 10, 0.39);
-        font-size: 2em;
+        font-size: 1.8em;
     }
 
     nav ul li {
+        margin: 10px 0;
         display: block;
-        text-align: center;
-        margin-bottom: 10px;
     }
 
     nav ul li a {
-        font-size: 1.5em;
+        font-size: 1em;
     }
 
-    form,
-    table {
-        width: 100%;
+    h2, h3 {
+        font-size: 1.6em;
+    }
+
+    p, ul li {
+        font-size: 1em;
+    }
+
+    table th, table td {
+        padding: 10px;
+        font-size: 0.9em;
+    }
+
+    footer {
+        font-size: 0.8em;
     }
 }
